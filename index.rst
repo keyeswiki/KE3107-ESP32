@@ -1,6 +1,6 @@
 .. toctree::
    :maxdepth: 1
-   :caption: 
+   :caption: KE3107 ESP32物联网智慧学校学习套件
 
    docs/1. 产品介绍
    docs/2. 产品安装
