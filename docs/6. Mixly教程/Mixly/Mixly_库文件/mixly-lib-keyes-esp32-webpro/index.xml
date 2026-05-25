@@ -1,0 +1,159 @@
+<script defer src="main.bundle.js"></script>
+
+<category id="webPro" name="网页编辑" colour="270">
+  <block type="espdashpro_display_components">
+    <value name="Label">
+      <shadow type="text">
+        <field name="TEXT">温度</field>
+      </shadow>
+    </value>
+    <value name="unit">
+      <shadow type="text">
+        <field name="TEXT">℃</field>
+      </shadow>
+    </value>
+    <value name="value">
+      <shadow type="math_number">
+        <field name="NUM">20</field>
+      </shadow>
+    </value> 
+  </block>
+  
+  <block type="espdashpro_state_component">
+    <value name="Label">
+      <shadow type="text">
+        <field name="TEXT">系统状态</field>
+      </shadow>
+    </value>
+    <value name="value">
+      <shadow type="text">
+        <field name="TEXT">正常</field>
+      </shadow>
+    </value>  
+  </block>
+  
+  <block type="espdashpro_update_chart">
+    <value name="Label">
+      <shadow type="text">
+        <field name="TEXT">温度变换曲线</field>
+      </shadow>
+    </value>
+    <value name="abscissa">
+          <shadow type="math_number">
+            <field name="NUM">mylistx</field>
+          </shadow>
+    </value>
+    <value name="ordinate">
+          <shadow type="math_number">
+            <field name="NUM">mylisty</field>
+          </shadow>
+    </value>
+  </block>
+  
+  <block type="espdashpro_display_components1">
+    <value name="Label">
+      <shadow type="text">
+        <field name="TEXT">卧室开关</field>
+      </shadow>
+    </value>
+    <value name="value">
+      <shadow type="math_number">
+        <field name="NUM">0</field>
+      </shadow>
+    </value> 
+  </block>
+  
+  <block type="espdashpro_get_component_value">
+    <value name="Label">
+      <shadow type="text">
+        <field name="TEXT">卧室开关</field>
+      </shadow>
+    </value>
+    <statement name="function">
+                <block type="serial_println">
+                    <field name="serial_select">Serial</field>
+                    <field name="new_line">println</field>
+                    <value name="CONTENT">
+                        <block type="variables_get">
+                            <field name="VAR">value</field>
+                        </block>
+                    </value>
+                </block>
+    </statement>
+  </block>
+  
+  <block type="espdashpro_get_joystick_value">
+    <value name="Label">
+      <shadow type="text">
+        <field name="TEXT">摇杆</field>
+      </shadow>
+    </value>
+    <statement name="function">
+            <block type="serial_println">
+              <field name="serial_select">Serial</field>
+              <field name="new_line">println</field>
+              <value name="CONTENT">
+                <block type="variables_get">
+                  <field name="VAR">x</field>
+                </block>
+              </value>
+              <next>
+                <block type="serial_println">
+                  <field name="serial_select">Serial</field>
+                  <field name="new_line">println</field>
+                  <value name="CONTENT">
+                    <block type="variables_get">
+                      <field name="VAR">y</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+  </block>
+  
+  <block type="espdashpro_set_title">
+    <value name="title">
+      <shadow type="text">
+        <field name="TEXT">科易互动机器人</field>
+      </shadow>
+    </value>
+  </block>
+  
+  <block type="espdashpro_setting_permissions">
+    <value name="name">
+      <shadow type="text">
+        <field name="TEXT">keyes</field>
+      </shadow>
+    </value>
+    <value name="pass">
+      <shadow type="text">
+        <field name="TEXT">123456</field>
+      </shadow>
+    </value>
+  </block>
+  
+  <block type="espdashpro_add_page">
+    <value name="page">
+      <shadow type="text">
+        <field name="TEXT">卧室</field>
+      </shadow>
+    </value>
+  </block>
+  
+  <block type="espdashpro_add_statistics">
+    <value name="Statistic">
+      <shadow type="text">
+        <field name="TEXT">作者</field>
+      </shadow>
+    </value>
+    <value name="Value">
+      <shadow type="text">
+        <field name="TEXT">科易互动机器人</field>
+      </shadow>
+    </value>
+  </block>
+  
+  <block type="espdashpro_set_component_page"></block>
+  
+</category>
