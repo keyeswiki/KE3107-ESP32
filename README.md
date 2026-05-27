@@ -1,5 +1,1 @@
-# 3017
-# keyes-KE3107-ESP32-
-# keyes-KE3107-ESP32-
-# keyes-KE3107-ESP32-
-# keyes-KE3107-ESP32-
+# KE3107 ESP32物联网智慧校园学习套件
