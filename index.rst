@@ -9,7 +9,7 @@
    docs/3. 产品安装
    docs/4. 安装驱动/4. 驱动安装（选读）
    docs/5. Arduino教程/Arduino
-   docs/6. Kidsblock教程/Kidsblock
+   docs/6. Kidsblock教程/KidsBlock
    docs/7. Mixly教程/Mixly
    docs/8. 问题解答
 
